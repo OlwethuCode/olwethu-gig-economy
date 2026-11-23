@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <meta name="description" content="A student project exploring gig economy opportunities, challenges and digital careers in South Africa.">
+  <title>{% block title %}The Gig Economy{% endblock %} — Olwethuthando</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="{{ url_for('home') }}" aria-label="The Gig Economy home">
+        <span class="brand-mark">G<span>.</span></span>
+        <span class="brand-name">THE GIG ECONOMY<small>OLWETHUTHANDO · PROJECT</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true')">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="{% if page == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+        <a class="{% if page == 'research' %}active{% endif %}" href="{{ url_for('research') }}">Research &amp; Findings</a>
+        <a class="{% if page == 'career' %}active{% endif %}" href="{{ url_for('career') }}">Career Focus</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand footer-brand" href="{{ url_for('home') }}"><span class="brand-mark">G<span>.</span></span><span class="brand-name">THE GIG ECONOMY<small>WORK, REIMAGINED</small></span></a>
+      <p>A project exploring opportunity and fairness in the digital world of work.</p>
+      <span class="footer-note">SOUTH AFRICA · 2026</span>
+    </div>
+  </footer>
+</body>
+</html>

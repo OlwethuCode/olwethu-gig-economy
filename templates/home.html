@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero hero-home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="eyebrow-line"></span> WORK IN A CHANGING WORLD</span>
+      <h1>The Gig<br>Economy<span class="title-dot">.</span></h1>
+      <p class="hero-lede">Opportunities, challenges and digital skills in a changing world of work.</p>
+      <a class="button button-dark" href="{{ url_for('research') }}">Explore the research <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-art" aria-label="Abstract illustration representing connected digital work" role="img">
+      <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+      <div class="art-center"><span>WORK<br>IN MOTION</span><i>✳</i></div>
+      <span class="art-tag tag-top">DIGITAL SKILLS</span><span class="art-tag tag-side">FLEXIBLE BY DESIGN</span>
+      <span class="art-spark spark-one">✳</span><span class="art-spark spark-two">✦</span>
+      <div class="art-card"><span class="card-dot"></span><span>Ideas meet opportunity</span><b>↗</b></div>
+    </div>
+    <div class="hero-index"><span>01</span> / 03</div>
+  </div>
+</section>
+<section class="section intro-section">
+  <div class="section-label"><span>01</span><span>PROJECT OVERVIEW</span></div>
+  <div class="intro-grid">
+    <div><h2>Understanding work<br>in the digital age<span class="title-dot">.</span></h2></div>
+    <div class="intro-text"><p>The gig economy is a way of working in which people earn money by completing individual tasks, short-term jobs or projects. Digital platforms can connect clients with workers who offer services such as graphic design, writing, editing, programming, delivery and transport.</p><p>This investigation considers the opportunities created by platform-based work as well as challenges such as irregular income, competition and limited employment protections.</p></div>
+  </div>
+</section>
+<section class="question-section">
+  <div class="section-label light-label"><span>THE BIG QUESTION</span><span>OUR INVESTIGATION</span></div>
+  <div class="question-mark">“</div>
+  <h2>To what extent can the gig economy provide realistic work and income opportunities for young people in South Africa?</h2>
+  <p>And what challenges should they understand before considering this type of work?</p>
+</section>
+<section class="section project-cards">
+  <div class="section-label"><span>02</span><span>WHY THIS MATTERS</span></div>
+  <div class="cards-grid">
+    <article class="info-card"><span class="card-number">01 / PURPOSE</span><span class="card-icon">◎</span><h3>Make informed choices</h3><p>Understand digital opportunities, identify useful skills and recognise the importance of fair working conditions.</p></article>
+    <article class="info-card"><span class="card-number">02 / METHOD</span><span class="card-icon">⌁</span><h3>Research meets practice</h3><p>Secondary research, a sample questionnaire dataset, spreadsheet analysis, database planning and a three-page information website.</p></article>
+    <article class="info-card card-accent"><span class="card-number">03 / EXPLORE</span><span class="card-icon">↗</span><h3>See the work up close</h3><p>Explore a career example in freelance graphic design, from digital skills to platform rules and project workflow.</p><a class="text-link" href="{{ url_for('career') }}">Discover the career <span>→</span></a></article>
+  </div>
+</section>
+<section class="abstract-section">
+  <div class="abstract-inner"><div><span class="eyebrow"><span class="eyebrow-line"></span> PROJECT SUMMARY</span><h2>Abstract</h2></div><div><p>This project investigates the gig economy, with a focus on opportunities and challenges relevant to South Africa. It explains how digital platforms connect clients and workers, examines flexibility, income uncertainty and worker protection, and presents a career example in freelance graphic design.</p><p>A questionnaire dataset of 20 records demonstrates data capture and analysis. <strong>The questionnaire results are simulated and are not real survey findings.</strong> The project concludes that gig work may offer flexible ways to earn income, but people should assess platform rules, payment conditions, safety and their own skills before making decisions.</p></div></div>
+</section>
+<section class="explore-strip"><div><span class="eyebrow">CONTINUE EXPLORING</span><h2>Where will curiosity take you?</h2></div><a class="button button-light" href="{{ url_for('research') }}">Research &amp; Findings <span aria-hidden="true">↗</span></a><a class="button button-outline" href="{{ url_for('career') }}">Career Focus <span aria-hidden="true">↗</span></a></section>
+{% endblock %}
